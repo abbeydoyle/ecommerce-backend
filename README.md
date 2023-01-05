@@ -66,7 +66,8 @@ There are 8 main sections of this repository:
 
 
 
-![Screencastify demonstration](./assets/screencastify.gif)
+![Screencastify VSCode demonstration](./assets/vscodescreencastify.gif)
+![Screencastify VSCode demonstration](./assets/insomniascreencastify.gif)
 
 
 
