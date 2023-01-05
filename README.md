@@ -3,8 +3,7 @@ A back end e-commerce site for internet retailers
 
 ## Description
 
-This project uses npm, inquirer, fs, jest, and javascript to generate a Team Portfolio Page with user input. All input is given within the terminal using Inquirer, a command line interface for Node.js. With user input, the portfolio page has custom color themes. There are employee-specific prompts, allowing for more personilized employee cards. This webpage file is then written into the project repository with the Node File System module. Each class and subclass was tested using Jest script tests, ensuring the correct object types and function returns. This project introduced working in the command line with Node Package Manager (npm), using javascript to create functions, inquirer prompts, and a string that will populate the webpage.
-
+This project uses npm, inquirer, MySQL, Dotenv, and Sequelize to create a backend e-commerce site for retailers. This is done by configuring a working Express.js API to use Sequelize to interact with a MySQL database. By using GET, POST, PUT, and DELETE routes, the user can choose to view all, create, update, or delete products, tags, or categories. This API was tested using Insomnia to visualize changes to each route handler and verify functionality.
 
 <!-- Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
@@ -27,56 +26,47 @@ This project uses npm, inquirer, fs, jest, and javascript to generate a Team Por
 
 ## Installation
 
-Applications required for use: 
-- Bash
-- VSCode
-- Node.js 
-
 Initialization: 
-- Copy the SSH code within this Github Repo 
-- In the terminal, type “git clone {SSH Code}” 
-- In the terminal, use the command "npm init -y" to install Node Package Manager 
-- Use the command "npm install inquirer" to get npm's inquirer package 
-- Use the command "npm install --save-dev jest" to get npm's jest package 
-- Ensure proper installation with the command "npm test" in the terminal
-- Still in the terminal, type “node index.js” 
-- Simply follow the prompts to create your team's Portfolio Page
-- Once complete, your index.html file will be written into the dist folder
+Copy the SSH code within this Github Repo 
+```
+git clone {SSH Code}
+npm init -y
+npm install --save mysql2
+npm install sequelize sqlite3
+npm install dotenv --save
+mysql -u root -p
+source db/schema.sql
+exit
+node seeds/index.js
+node server.js
+```
+
 <!-- What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running. -->
 
 
 ## Usage
 
-There are 10 main sections of this repository:
+There are 8 main sections of this repository:
 
-- [SRC Folder](https://github.com/abbeydoyle/team-profile-generator/tree/main/src) - Contains a text file for ideas, a [generateHTML.js](https://github.com/abbeydoyle/team-profile-generator/blob/main/src/generateHTML.js) file, encoding the functions to create the Team Portfolio webpage based on the user input gathered from inquirer
+- [Config Folder](https://github.com/abbeydoyle/ecommerce-backend/tree/main/config) - Contains the js file enconding dotenv and sequelize functionality for connecting the database
 
-- [index.js](https://github.com/abbeydoyle/team-profile-generator/blob/main/index.html) - Contains the main script of this application, encluding the file writing system and inquirer prompts
+- [DB Folder](https://github.com/abbeydoyle/ecommerce-backend/tree/main/db) - Contains the schema.sql file used for database creation
 
-- [Dist Folder](https://github.com/abbeydoyle/team-profile-generator/tree/main/dist) - Created by the script to contain the index.html file generated through this app
+- [Models Folder](https://github.com/abbeydoyle/ecommerce-backend/tree/main/models) - Contains all fields and rules for each product, tag, and category model
 
-- [Lib Folder](https://github.com/abbeydoyle/team-profile-generator/tree/main/lib) - Contains the scripts containing class and subclass creation
+- [Routes Folder](https://github.com/abbeydoyle/ecommerce-backend/tree/main/routes) - Contains JS route functions for each category, product, and tag groups, including GET, POST, PUT, and DELETE routes
 
-- [Notes Folder](https://github.com/abbeydoyle/team-profile-generator/tree/main/notes) - Contains a text file for ideas, a [structure.html](https://github.com/abbeydoyle/team-profile-generator/blob/main/notes/structure.html) html page to envision the final product of this application, and graveyard javascript files to place nonworking code for future reference
+- [Seeds Folder](https://github.com/abbeydoyle/ecommerce-backend/tree/main/seeds) - Contains the seeds data to populate the database upon app initialization
 
-- [Test Folder](https://github.com/abbeydoyle/team-profile-generator/tree/main/test) - Contains Jest testing scripts for each class and subclass functions
+- [gitignore](https://github.com/abbeydoyle/ecommerce-backend/blob/main/.gitignore) - Contains all files to be ignored in the Github repository
 
-- [gitignore](https://github.com/abbeydoyle/team-profile-generator/blob/main/.gitignore) - Contains all files to be ignored in the Github repository
+- [License](https://github.com/abbeydoyle/ecommerce-backend/blob/main/LICENSE) - Contains the webpage license
 
-- [License](https://github.com/abbeydoyle/module-two-challenge/blob/main/LICENSE) - Contains the webpage license
+- [ReadMe](https://github.com/abbeydoyle/ecommerce-backend/blob/main/README.md) - This file containing an executive overview of the project
 
-- [ReadMe](https://github.com/abbeydoyle/module-two-challenge/blob/main/README.md) - This file containing an executive overview of the project
 
-- [Sample Webpage](https://abbeydoyle.github.io/team-profile-generator/) - This app has been used to generate a sample Team Portfolio that has been deployed at this link via Github Pages
 
-Generated Webpage: [https://abbeydoyle.github.io/team-profile-generator/](https://abbeydoyle.github.io/team-profile-generator/)
-
-![Screencastify demonstration](./dist/team-profile.gif)
-![Earthy green](./dist/earthy%20green.png)
-![Muted blues](./dist/muted%20blues.png)
-![Rustic orange](./dist/rustic%20orange.png)
-![Dusty pink](./dist/Dusty%20pink.png)
-![Neutral](./dist/black-white.png)
+![Screencastify demonstration](./assets/screencastify.gif)
 
 
 
@@ -114,19 +104,19 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Badges
 
-![badmath](https://img.shields.io/github/repo-size/abbeydoyle/team-profile-generator?color=pink&style=plastic)
+![badmath](https://img.shields.io/github/repo-size/abbeydoyle/ecommerce-backend?color=pink&style=plastic)
 
-![badmath](https://img.shields.io/github/issues-closed-raw/abbeydoyle/team-profile-generator?color=pink&style=plastic)
+![badmath](https://img.shields.io/github/issues-closed-raw/abbeydoyle/ecommerce-backend?color=pink&style=plastic)
 
-![badmath](https://img.shields.io/github/issues-raw/abbeydoyle/team-profile-generator?color=pink&style=plastic)
+![badmath](https://img.shields.io/github/issues-raw/abbeydoyle/ecommerce-backend?color=pink&style=plastic)
 
-![badmath](https://img.shields.io/github/license/abbeydoyle/team-profile-generator?color=pink&style=plastic)
+![badmath](https://img.shields.io/github/license/abbeydoyle/ecommerce-backend?color=pink&style=plastic)
 
-![badmath](https://img.shields.io/github/commits-since/abbeydoyle/team-profile-generator/7aaca42/main?color=pink&style=plastic)
+![badmath](https://img.shields.io/github/commits-since/abbeydoyle/ecommerce-backend/3cafcf0/main?color=pink&style=plastic)
 
-![badmath](https://img.shields.io/github/last-commit/abbeydoyle/team-profile-generator?color=pink&style=plastic)
+![badmath](https://img.shields.io/github/last-commit/abbeydoyle/ecommerce-backend?color=pink&style=plastic)
 
-![badmath](https://img.shields.io/maintenance/yes/2022?color=pink&style=plastic)
+![badmath](https://img.shields.io/maintenance/yes/2023?color=pink&style=plastic)
 
 
 <!-- ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
@@ -135,18 +125,13 @@ Badges aren't necessary, per se, but they demonstrate street cred. Badges let ot
 
 ## Features
 
-This page features:
+This app features:
 
-- Keypress function to end process when ‘esc’ is pressed 
-- Error messages if no input is given 
-- File written directly into user’s system 
-- Separate card generation based on employee role
-- Email verification
-- Jest class tests
-- Built in Tailwind CSS
-- Email links for all employees
-- Github portfolio links for engineers
-- Custom Color Themes
+- GET routes that return all items for product, tags, and category groups
+- GET 1 routes that return specified items in each group
+- POST routes to add a new product, tag, or category
+- PUT routes to update any product, tag, or category
+- DELETE routes to delete a specified product, tag, or category
 
 
 
@@ -158,20 +143,12 @@ If you created an application or package and would like other developers to cont
 
 ## Tests
 
-- Press ‘esc’ at any time to end the process
-- Try to bypass an inquirer prompt and receive an error message
-- Update an employee's role then select "View all employees" to verify your change occurred
+- Use the GET routes all product, tags, or category items listed
+- Use the GET 1 route to see a specific item in each group
+- Create a new product, category, or tag using the POST route, resend the API using Insomnia, and see the new information added using the respective GET 1 request for each group
+- Update any product, category, or tag using the PUT routes and check that it has been updated using the GET 1 route
+- Delete any item using the DELETE route with the specific ID and check it has been deleted with the GET 1 route to receive an error message that this ID does not exist
 
-
-
-- Select different employee types for role-specific prompts
-- Add as many employees as desired and watch the correct card types and count populate
-- Select an employee's email and your email program will open and populate the TO field
-- Select your engineer's Github profile name and their portfolio will open
-- Attempt to bypass a prompt and an error message will appear
-- Attempt to type in a non-email string in the email prompt and an error message will appear
-- Run the built in Jest tests with the command "npm test"
-- Try out a different color theme each time!
 
 
 <!-- Go the extra mile and write tests for your application. Then provide examples on how to run them here. -->
