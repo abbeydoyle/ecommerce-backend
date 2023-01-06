@@ -65,9 +65,9 @@ There are 8 main sections of this repository:
 - [ReadMe](https://github.com/abbeydoyle/ecommerce-backend/blob/main/README.md) - This file containing an executive overview of the project
 
 
+Select the gifs below to be redirected to the videos demonstrating the app's funcionality
 
-![Screencastify VSCode demonstration](./assets/vscodescreencastify.gif)
-![Screencastify VSCode demonstration](./assets/insomniascreencastify.gif)
+[![Screencastify VSCode demonstration](./assets/vscodescreencastify.gif)](https://drive.google.com/file/d/1J-5IYGvaGA1zNrDGdJ4okgSz4it4nXS0/view) [![Screencastify VSCode demonstration](./assets/insomniascreencastify.gif)](https://drive.google.com/file/d/160TTKoMAUlA6jp0DGju7dzQLX6wWmoHz/view)
 
 
 
